@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kostenlose Immobilienbewertung online - Ermitteln Sie den Wert Ihrer Immobilie in wenigen Minuten ohne Registrierung.">
+    <title>Kostenlose Immobilienbewertung - Jetzt Immobilienwert ermitteln</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ImmoWert</h1>
+                </div>
+                <nav class="main-nav">
+                    <a href="#rechner">Bewertung</a>
+                    <a href="#methoden">Methoden</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#kontakt" class="btn-secondary">Kontakt</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Immobilienbewertung kostenlos online</h2>
+                    <p class="hero-subtitle">Ermitteln Sie kostenlos, ohne Registrierung und in wenigen Minuten eine erste Einschätzung zum Wert Ihrer Immobilie</p>
+                    <div class="trust-badges">
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>100% kostenlos</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Keine Registrierung</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>In 3 Minuten</span>
+                        </div>
+                    </div>
+                    <a href="#rechner" class="btn-primary btn-large">Jetzt kostenlos bewerten</a>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-placeholder">
+                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#f0f4f8"/>
+                            <path d="M200 80 L320 160 L320 260 L80 260 L80 160 Z" fill="#fff" stroke="#0066cc" stroke-width="3"/>
+                            <rect x="140" y="180" width="40" height="60" fill="#0066cc"/>
+                            <rect x="220" y="180" width="40" height="60" fill="#0066cc"/>
+                            <rect x="180" y="160" width="40" height="40" fill="#ffd700"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="rechner" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h3>Welche Immobilie möchten Sie bewerten?</h3>
+                <p>Wählen Sie zunächst den Immobilientyp aus</p>
+            </div>
+
+            <!-- Property Type Selection -->
+            <div id="step-1" class="calculator-step active">
+                <div class="property-types">
+                    <div class="property-type-card" data-type="einfamilienhaus">
+                        <div class="property-icon">🏡</div>
+                        <h4>Einfamilienhaus</h4>
+                    </div>
+                    <div class="property-type-card" data-type="eigentumswohnung">
+                        <div class="property-icon">🏢</div>
+                        <h4>Eigentumswohnung</h4>
+                    </div>
+                    <div class="property-type-card" data-type="doppelhaushaelfte">
+                        <div class="property-icon">🏘️</div>
+                        <h4>Doppelhaushälfte</h4>
+                    </div>
+                    <div class="property-type-card" data-type="reihenhaus">
+                        <div class="property-icon">🏠</div>
+                        <h4>Reihenhaus</h4>
+                    </div>
+                    <div class="property-type-card" data-type="mehrfamilienhaus">
+                        <div class="property-icon">🏘️</div>
+                        <h4>Mehrfamilienhaus</h4>
+                    </div>
+                    <div class="property-type-card" data-type="grundstueck">
+                        <div class="property-icon">🌳</div>
+                        <h4>Grundstück</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Details Form -->
+            <div id="step-2" class="calculator-step">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 33%"></div>
+                </div>
+                <form id="property-form" class="property-form">
+                    <div class="form-section">
+                        <h4>Adresse der Immobilie</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="street">Straße und Hausnummer*</label>
+                                <input type="text" id="street" name="street" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zipcode">Postleitzahl*</label>
+                                <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ort*</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Details zur Immobilie</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="living-area">Wohnfläche (m²)*</label>
+                                <input type="number" id="living-area" name="living-area" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="plot-area">Grundstücksfläche (m²)</label>
+                                <input type="number" id="plot-area" name="plot-area" min="1">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rooms">Anzahl Zimmer*</label>
+                                <input type="number" id="rooms" name="rooms" min="1" step="0.5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="construction-year">Baujahr*</label>
+                                <input type="number" id="construction-year" name="construction-year" min="1800" max="2026" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="condition">Zustand*</label>
+                                <select id="condition" name="condition" required>
+                                    <option value="">Bitte wählen</option>
+                                    <option value="neuwertig">Neuwertig</option>
+                                    <option value="gepflegt">Gepflegt</option>
+                                    <option value="renovierungsbeduerftig">Renovierungsbedürftig</option>
+                                    <option value="sanierungsbeduerftig">Sanierungsbedürftig</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="renovation-year">Letzte Renovierung (Jahr)</label>
+                                <input type="number" id="renovation-year" name="renovation-year" min="1900" max="2026">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Ausstattung</h4>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="balkon">
+                                <span>Balkon/Terrasse</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="garten">
+                                <span>Garten</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="keller">
+                                <span>Keller</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="garage">
+                                <span>Garage/Stellplatz</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="aufzug">
+                                <span>Aufzug</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="einbaukueche">
+                                <span>Einbauküche</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Kontaktdaten für Ihr Ergebnis</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name*</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon (optional)</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required>
+                            <span>Ich akzeptiere die Datenschutzbestimmungen*</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="goToStep(1)">Zurück</button>
+                        <button type="submit" class="btn-primary">Bewertung erhalten</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div id="step-3" class="calculator-step">
+                <div class="result-container">
+                    <div class="result-header">
+                        <h3>Ihre Immobilienbewertung</h3>
+                        <p>Basierend auf Ihren Angaben und aktuellen Marktdaten</p>
+                    </div>
+                    <div class="result-value">
+                        <div class="value-range">
+                            <span class="value-label">Geschätzter Wert</span>
+                            <span class="value-amount" id="estimated-value">€ 0</span>
+                            <span class="value-range-text">Wertspanne: <span id="value-range">€ 0 - € 0</span></span>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Quadratmeterpreis</span>
+                            <span class="detail-value" id="price-per-sqm">€ 0/m²</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Bewertungsmethode</span>
+                            <span class="detail-value">Vergleichswertverfahren</span>
+                        </div>
+                    </div>
+                    <div class="result-disclaimer">
+                        <p><strong>Hinweis:</strong> Diese Bewertung ist eine unverbindliche Schätzung und ersetzt keine professionelle Immobilienbewertung durch einen Sachverständigen.</p>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn-primary" onclick="window.print()">Bewertung als PDF speichern</button>
+                        <button class="btn-secondary" onclick="resetCalculator()">Neue Bewertung</button>
+                    </div>
+                    <div class="next-steps">
+                        <h4>Nächste Schritte</h4>
+                        <div class="next-steps-cards">
+                            <div class="next-step-card">
+                                <h5>Professionelle Bewertung</h5>
+                                <p>Erhalten Sie eine detaillierte Bewertung durch unsere Experten</p>
+                                <a href="#kontakt" class="btn-link">Termin vereinbaren →</a>
+                            </div>
+                            <div class="next-step-card">
+                                <h5>Verkaufsberatung</h5>
+                                <p>Kostenlose Beratung zum optimalen Verkauf Ihrer Immobilie</p>
+                                <a href="#kontakt" class="btn-link">Beratung anfordern →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-content">
+                <div class="trust-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50.000+</div>
+                        <div class="stat-label">Bewertungen durchgeführt</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.8/5</div>
+                        <div class="stat-label">Kundenbewertung</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Jahre Erfahrung</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methods Section -->
+    <section id="methoden" class="methods-section">
+        <div class="container">
+            <div class="section-header centered">
+                <h3>Wie funktioniert die Immobilienbewertung?</h3>
+                <p>Wir nutzen professionelle Bewertungsmethoden für eine präzise Einschätzung</p>
+            </div>
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">📊</div>
+                    <h4>Vergleichswertverfahren</h4>
+                    <p>Analyse vergleichbarer Immobilien in Ihrer Region basierend auf aktuellen Verkaufspreisen.</p>
+                    <ul class="method-features">
+                        <li>Aktuelle Marktdaten</li>
+                        <li>Regionale Preisanalyse</li>
+                        <li>Objektvergleich</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">🏗️</div>
+                    <h4>Sachwertverfahren</h4>
+                    <p>Berechnung auf Basis der Baukosten unter Berücksichtigung von Alter und Zustand.</p>
+                    <ul class="method-features">
+                        <li>Bausubstanzanalyse</li>
+                        <li>Alterswertminderung</li>
+                        <li>Bodenwertermittlung</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">💰</div>
+                    <h4>Ertragswertverfahren</h4>
+                    <p>Bewertung basierend auf den zu erwartenden Mieteinnahmen.</p>
+                    <ul class="method-features">
+                        <li>Mietpreisanalyse</li>
+                        <li>Renditeberechnung</li>
+                        <li>Zukunftsprognose</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header centered">
+                <h3>Bewertungsmethoden im Vergleich</h3>
+            </div>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Methode</th>
+                            <th>Kosten</th>
+                            <th>Dauer</th>
+                            <th>Genauigkeit</th>
+                            <th>Geeignet für</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Online-Bewertung</strong></td>
+                            <td>Kostenlos</td>
+                            <td>3 Minuten</td>
+                            <td>⭐⭐⭐</td>
+                            <td>Erste Einschätzung</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Makler-Bewertung</strong></td>
+                            <td>Kostenlos</td>
+                            <td>1-2 Tage</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>Verkaufsvorbereitung</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gutachter-Bewertung</strong></td>
+                            <td>500-2.000 €</td>
+                            <td>1-2 Wochen</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>Gerichtliche Zwecke</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header centered">
+                <h3>Häufig gestellte Fragen</h3>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wie genau ist die Online-Bewertung?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Unsere Online-Bewertung bietet eine solide erste Einschätzung des Immobilienwerts basierend auf aktuellen Marktdaten und Vergleichsobjekten. Für rechtlich bindende Zwecke empfehlen wir eine professionelle Bewertung durch einen Sachverständigen.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Ist die Bewertung wirklich kostenlos?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, unsere Online-Immobilienbewertung ist zu 100% kostenlos und unverbindlich. Es entstehen keinerlei Kosten oder Verpflichtungen.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Welche Daten werden für die Bewertung benötigt?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Für eine präzise Bewertung benötigen wir grundlegende Informationen wie Adresse, Wohnfläche, Grundstücksgröße, Baujahr, Zustand und Ausstattung der Immobilie.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wie lange dauert die Bewertung?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Die Online-Bewertung erhalten Sie sofort nach Eingabe aller erforderlichen Daten - in der Regel dauert der gesamte Prozess nur 3-5 Minuten.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Was passiert mit meinen Daten?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ihre Daten werden vertraulich behandelt und nur für die Erstellung der Immobilienbewertung verwendet. Wir geben Ihre Daten nicht an Dritte weiter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="kontakt" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h3>Bereit für Ihre kostenlose Immobilienbewertung?</h3>
+                <p>Erhalten Sie in wenigen Minuten eine professionelle Einschätzung zum Wert Ihrer Immobilie</p>
+                <a href="#rechner" class="btn-primary btn-large">Jetzt kostenlos bewerten</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ImmoWert</h4>
+                    <p>Professionelle Immobilienbewertung online</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Service</h5>
+                    <ul>
+                        <li><a href="#rechner">Immobilienbewertung</a></li>
+                        <li><a href="#methoden">Bewertungsmethoden</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Rechtliches</h5>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Kontakt</h5>
+                    <ul>
+                        <li>Tel: 0800 / 123 456 78</li>
+                        <li>E-Mail: info@immowert.de</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ImmoWert. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
