@@ -467,3 +467,88 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Asia Market Map Interactions
+document.addEventListener('DOMContentLoaded', function() {
+    initializeAsiaMap();
+});
+
+function initializeAsiaMap() {
+    const countries = document.querySelectorAll('.asia-map .country');
+    const panels = {
+        china: document.getElementById('china-panel'),
+        korea: document.getElementById('korea-panel'),
+        japan: document.getElementById('japan-panel')
+    };
+
+    if (!countries.length) return;
+
+    // Desktop: hover interactions
+    countries.forEach(country => {
+        const countryName = country.dataset.country;
+
+        country.addEventListener('mouseenter', function() {
+            // Highlight all paths of the same country (for Japan with multiple islands)
+            document.querySelectorAll(`.country[data-country="${countryName}"]`).forEach(path => {
+                path.classList.add('active');
+            });
+
+            // Show corresponding panel
+            hideAllPanels();
+            if (panels[countryName]) {
+                panels[countryName].classList.add('active');
+            }
+        });
+
+        country.addEventListener('mouseleave', function() {
+            // Remove highlight
+            document.querySelectorAll(`.country[data-country="${countryName}"]`).forEach(path => {
+                path.classList.remove('active');
+            });
+
+            // Hide panel
+            if (panels[countryName]) {
+                panels[countryName].classList.remove('active');
+            }
+        });
+
+        // Mobile: click/tap interactions
+        country.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const isActive = this.classList.contains('active');
+
+            // Reset all countries and panels
+            countries.forEach(c => c.classList.remove('active'));
+            hideAllPanels();
+
+            if (!isActive) {
+                // Activate clicked country
+                document.querySelectorAll(`.country[data-country="${countryName}"]`).forEach(path => {
+                    path.classList.add('active');
+                });
+
+                // Show panel
+                if (panels[countryName]) {
+                    panels[countryName].classList.add('active');
+                }
+            }
+        });
+    });
+
+    // Close panels when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.asia-map-container')) {
+            countries.forEach(c => c.classList.remove('active'));
+            hideAllPanels();
+        }
+    });
+
+    function hideAllPanels() {
+        Object.values(panels).forEach(panel => {
+            if (panel) {
+                panel.classList.remove('active');
+            }
+        });
+    }
+}

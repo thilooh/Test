@@ -823,6 +823,202 @@ body {
     }
 }
 
+/* Asia Markets Map Section */
+.asia-markets-section {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.asia-map-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.asia-map {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
+.asia-map .country {
+    fill: var(--secondary-color);
+    stroke: var(--border-color);
+    stroke-width: 2;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.asia-map .country.china:hover,
+.asia-map .country.china.active {
+    fill: #e74c3c;
+    stroke: #c0392b;
+    filter: drop-shadow(0 4px 8px rgba(231, 76, 60, 0.3));
+}
+
+.asia-map .country.korea:hover,
+.asia-map .country.korea.active {
+    fill: #3498db;
+    stroke: #2980b9;
+    filter: drop-shadow(0 4px 8px rgba(52, 152, 219, 0.3));
+}
+
+.asia-map .country.japan:hover,
+.asia-map .country.japan.active {
+    fill: #e91e63;
+    stroke: #c2185b;
+    filter: drop-shadow(0 4px 8px rgba(233, 30, 99, 0.3));
+}
+
+.asia-map .country-label {
+    font-size: 14px;
+    font-weight: 700;
+    fill: var(--text-light);
+    text-anchor: middle;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.asia-map .country.china:hover ~ .country-label[data-country="china"],
+.asia-map .country.china.active ~ .country-label[data-country="china"] {
+    fill: #c0392b;
+}
+
+.market-info-panel {
+    position: absolute;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--border-color);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.market-info-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#china-panel {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: #e74c3c;
+}
+
+#china-panel.active {
+    transform: translateY(-50%);
+}
+
+#korea-panel {
+    right: 25%;
+    top: 15%;
+    border-color: #3498db;
+}
+
+#japan-panel {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: #e91e63;
+}
+
+#japan-panel.active {
+    transform: translateY(-50%);
+}
+
+.market-info-panel h4 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+#china-panel h4 {
+    color: #e74c3c;
+}
+
+#korea-panel h4 {
+    color: #3498db;
+}
+
+#japan-panel h4 {
+    color: #e91e63;
+}
+
+.market-info-panel p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.platform-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.platform-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--border-color);
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.platform-list li:first-child {
+    border-top: none;
+}
+
+.platform-icon {
+    font-size: 1.25rem;
+}
+
+/* Responsive Asia Map */
+@media (max-width: 768px) {
+    .asia-map-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .asia-map {
+        max-width: 100%;
+    }
+
+    .market-info-panel {
+        position: relative;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .market-info-panel.active {
+        transform: none !important;
+    }
+
+    .asia-markets-section .section-header p {
+        margin-bottom: 1rem;
+    }
+
+    .asia-markets-section .section-header p::after {
+        content: " (Tap on countries)";
+    }
+}
+
 /* Print Styles */
 @media print {
     .header,
