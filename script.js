@@ -186,6 +186,169 @@ const artikelInhalte = {
       <h3>Wissenschaftliche Evidenz</h3>
       <p>Mehrere Studien belegen die Wirksamkeit von Biofeedback bei Belastungsinkontinenz und Dranginkontinenz. Kombiniert mit Beckenbodentraining ist es einer der effektivsten konservativen Therapieansätze.</p>
     `
+  },
+  'Beckenboden in den Wechseljahren: Wenn Östrogen fehlt': {
+    kategorie: 'Inkontinenz',
+    datum: '20. Februar 2026',
+    lesezeit: '7 Min.',
+    inhalt: `
+      <p>In den Wechseljahren sinkt der Östrogenspiegel deutlich. Das betrifft nicht nur die Gebärmutter – auch das Bindegewebe im Beckenbereich und die Muskulatur des Beckenbodens reagieren auf den Hormonabfall. Die Folge: Gewebe verliert an Elastizität und Stabilität, was Inkontinenz und Senkungsbeschwerden begünstigt.</p>
+      <h3>Was Östrogen mit dem Beckenboden macht</h3>
+      <p>Östrogen hält Schleimhäute feucht, stärkt Kollagenfasern im Bindegewebe und unterstützt die Muskeldurchblutung. Fällt der Spiegel, werden Blasenschleimhaut und Harnröhre empfindlicher, das Bindegewebe verliert Tonus und die Muskulatur erschöpft schneller.</p>
+      <h3>Typische Beschwerden</h3>
+      <ul>
+        <li>Häufiger oder plötzlicher Harndrang (Dranginkontinenz)</li>
+        <li>Urinverlust beim Husten, Niesen oder Lachen (Belastungsinkontinenz)</li>
+        <li>Wiederkehrende Harnwegsinfekte</li>
+        <li>Trockenheitsgefühl und Reizung in der Scheide</li>
+        <li>Druckgefühl im Unterleib (Senkung)</li>
+      </ul>
+      <h3>Was hilft</h3>
+      <ul>
+        <li><strong>Beckenbodentraining:</strong> Auch in und nach den Wechseljahren wirksam – Muskeln lassen sich in jedem Alter trainieren.</li>
+        <li><strong>Lokale Östrogentherapie:</strong> Niedrig dosierte Östrogenpräparate (Creme, Zäpfchen) direkt in der Scheide stärken das lokale Gewebe ohne nennenswerte systemische Wirkung. Besprechen Sie dies mit Ihrer Ärztin.</li>
+        <li><strong>Physiotherapie:</strong> Gezielte Behandlung von Muskeln und Bindegewebe.</li>
+        <li><strong>Ausreichend trinken:</strong> Trotz Inkontinenz mind. 1,5 Liter täglich, da konzentrierter Urin die Schleimhaut reizt.</li>
+      </ul>
+      <h3>Wichtig: Beschwerden ansprechen</h3>
+      <p>Viele Frauen halten Inkontinenz in den Wechseljahren für „normal" und sagen nichts. Doch die meisten Beschwerden sind gut behandelbar. Sprechen Sie Ihre Ärztin oder Ihren Arzt offen darauf an.</p>
+    `
+  },
+  'Laufen mit Beckenbodenschwäche: So trainieren Sie sicher': {
+    kategorie: 'Übungen',
+    datum: '17. Februar 2026',
+    lesezeit: '6 Min.',
+    inhalt: `
+      <p>Laufen gehört zu den beliebtesten Sportarten – und zu jenen, die bei Beckenbodenschwäche am häufigsten gemieden werden. Denn der Aufprall beim Laufen erzeugt Druckspitzen im Bauchraum, die ungewollten Urinverlust auslösen können. Das muss aber kein Grund sein, ganz aufs Laufen zu verzichten.</p>
+      <h3>Warum Laufen den Beckenboden belastet</h3>
+      <p>Bei jedem Schritt wirkt das Zwei- bis Dreifache des Körpergewichts auf den Boden – und damit auch auf Blase, Darm und Beckenboden. Ist die Beckenbodenmuskulatur nicht stark genug, um diese Stöße abzufangen, kommt es zum Urinverlust.</p>
+      <h3>Grundvoraussetzung: Erst trainieren, dann laufen</h3>
+      <p>Wer unter Belastungsinkontinenz leidet, sollte zuerst gezielt Beckenbodentraining aufbauen – mindestens 6–8 Wochen – bevor mit dem Laufen begonnen oder fortgefahren wird. Eine Physiotherapeutin kann prüfen, ob die Muskelkraft ausreichend ist.</p>
+      <h3>Praktische Tipps</h3>
+      <ul>
+        <li><strong>Schrittfrequenz erhöhen:</strong> Kürzere, schnellere Schritte reduzieren die Aufprallkraft.</li>
+        <li><strong>Auf weichem Untergrund starten:</strong> Waldboden oder Tartanbahn sind schonender als Asphalt.</li>
+        <li><strong>Geh-Lauf-Wechsel:</strong> Intervalle mit Gehpausen reduzieren die Gesamtbelastung.</li>
+        <li><strong>Beckenboden beim Aufprall aktivieren:</strong> Trainieren Sie, den Beckenboden kurz vor dem Aufprall anzuspannen.</li>
+        <li><strong>Starke Blase vor dem Laufen:</strong> Kurz vorher die Blase entleeren – aber kein übermäßiges „Sicherheitstoilettengehen".</li>
+        <li><strong>Geeignete Einlage als Übergangslösung:</strong> Speziell für Sport konzipierte dünne Einlagen können während der Trainingsphase Sicherheit geben.</li>
+      </ul>
+      <h3>Wann auf Laufen verzichten?</h3>
+      <p>Direkt nach einer Geburt (mind. 3 Monate warten), nach Beckenboden-Operationen (Rücksprache mit Arzt) oder bei starken Senkungsbeschwerden sollte Laufen zunächst pausiert werden.</p>
+    `
+  },
+  'Pessare bei Senkungsbeschwerden: Was sie leisten und wie sie sitzen': {
+    kategorie: 'Therapie',
+    datum: '3. Februar 2026',
+    lesezeit: '5 Min.',
+    inhalt: `
+      <p>Ein Pessar ist ein medizinisches Hilfsmittel aus weichem Silikon, das in die Scheide eingesetzt wird. Es stützt abgesenktes Gewebe – etwa die Blase, den Darm oder die Gebärmutter – mechanisch von innen und kann dabei Inkontinenz und Druckgefühl deutlich lindern.</p>
+      <h3>Für wen ist ein Pessar geeignet?</h3>
+      <ul>
+        <li>Frauen mit Blasen- oder Gebärmuttersenkung</li>
+        <li>Belastungsinkontinenz, die auf konservative Therapie nicht ausreichend anspricht</li>
+        <li>Als Überbrückung, wenn eine Operation nicht oder noch nicht möglich ist</li>
+        <li>Als dauerhafte Alternative zur Operation (für viele Frauen gut geeignet)</li>
+      </ul>
+      <h3>Wie funktioniert das?</h3>
+      <p>Das Pessar wird von einer Ärztin oder einem Arzt angepasst – es gibt viele Formen (Ring, Würfel, Schale) und Größen. Nach der Anpassung kann das Pessar selbst eingesetzt, getragen und entfernt werden. Viele Frauen spüren es bei richtiger Passform kaum.</p>
+      <h3>Was Pessare leisten – und was nicht</h3>
+      <p>Pessare lindern Symptome effektiv, beheben aber nicht die zugrunde liegende Schwäche von Muskeln und Bindegewebe. Daher ist begleitendes Beckenbodentraining wichtig. Regelmäßige Kontrollen beim Arzt sind notwendig, um Druckstellen oder Infektionen frühzeitig zu erkennen.</p>
+      <h3>Kostenübernahme</h3>
+      <p>Pessare werden bei ärztlicher Indikation von den gesetzlichen Krankenkassen in der Regel erstattet. Fragen Sie Ihre Ärztin oder Ihren Arzt nach einer Verordnung.</p>
+    `
+  },
+  'Stress und Blase: Warum Anspannung häufigen Harndrang verursacht': {
+    kategorie: 'Inkontinenz',
+    datum: '25. Januar 2026',
+    lesezeit: '5 Min.',
+    inhalt: `
+      <p>Viele Menschen kennen das Phänomen: Kurz vor einer Prüfung, einem wichtigen Gespräch oder in einer angespannten Situation drängt die Blase plötzlich stärker. Dieser Zusammenhang ist kein Einbildung – er ist biologisch gut erklärbar.</p>
+      <h3>Wie Stress die Blase beeinflusst</h3>
+      <p>Das vegetative Nervensystem steuert sowohl die Stressreaktion als auch die Blasenfunktion. In Stresssituationen schüttet der Körper Adrenalin und Kortisol aus. Diese Botenstoffe erhöhen die Wachsamkeit – und können dabei auch die Blasenmuskulatur in erhöhte Bereitschaft versetzen, was zu übermäßiger Reizbarkeit führt.</p>
+      <h3>Der Teufelskreis</h3>
+      <p>Wer einmal in einer stressigen Situation Harndrang erlebt, beginnt oft, die Blase zu beobachten und häufig vorsorglich die Toilette aufzusuchen. Das trainiert die Blase paradoxerweise darauf, bei immer kleineren Füllmengen zu melden – ein klassischer Lernprozess, der den Drang verstärkt.</p>
+      <h3>Was hilft</h3>
+      <ul>
+        <li><strong>Blasentraining:</strong> Schrittweise die Intervalle zwischen den Toilettengängen verlängern, um die Blasenkapazität wieder zu steigern.</li>
+        <li><strong>Entspannungstechniken:</strong> Atemübungen, progressive Muskelentspannung oder Achtsamkeitstraining können das vegetative Nervensystem beruhigen.</li>
+        <li><strong>Drangaufschub üben:</strong> Bei Drang bewusst kurz warten (10–30 Sekunden), tief durchatmen, Beckenboden leicht anspannen – der Drang ebbt dann oft ab.</li>
+        <li><strong>Koffein und Alkohol reduzieren:</strong> Beide wirken blasenreizend und verstärken stressbedingten Drang.</li>
+      </ul>
+      <h3>Wann professionelle Hilfe suchen?</h3>
+      <p>Wenn stressbedingter Harndrang den Alltag stark einschränkt oder mit tatsächlichem Urinverlust verbunden ist, lohnt sich eine Abklärung beim Arzt sowie gegebenenfalls eine Begleitung durch Physiotherapie oder Verhaltenstherapie.</p>
+    `
+  },
+  'Magnetfeldtherapie für den Beckenboden: Wie funktioniert das?': {
+    kategorie: 'Therapie',
+    datum: '15. Februar 2026',
+    lesezeit: '7 Min.',
+    inhalt: `
+      <p>Magnetfeldbasierte Beckenbodentherapie klingt nach Science-Fiction – ist aber ein etabliertes Verfahren in der Rehabilitation. Das Prinzip: Magnetfeldimpulse dringen durch Kleidung und Haut bis in die Muskelschichten und lösen dort unwillkürliche Kontraktionen aus.</p>
+      <h3>Das physikalische Prinzip</h3>
+      <p>Eine Magnetfeldspule – meist in einem speziellen Trainingsstuhl verbaut – erzeugt pulsierende Magnetfelder. Diese induzieren im umliegenden Gewebe schwache elektrische Ströme, die die motorischen Nerven reizen und so Muskelzuckungen auslösen. Der Vorgang ist schmerzfrei und erfordert keine aktive Körperanstrengung.</p>
+      <h3>Was passiert in einer Sitzung?</h3>
+      <p>Man sitzt vollständig bekleidet auf dem Gerät, entspannt sich und lässt die Technologie arbeiten. Pro Sitzung (typischerweise 20–22 Minuten) können mehrere Tausend Muskelkontraktionen erzeugt werden – weit mehr, als durch willkürliches Training erreichbar wäre.</p>
+      <h3>Für wen ist es geeignet?</h3>
+      <ul>
+        <li>Personen, die den Beckenboden nicht willentlich ansteuern können (z.&thinsp;B. nach Operationen)</li>
+        <li>Menschen mit starker Schamhemmung gegenüber körpernahen Therapien</li>
+        <li>Ergänzung zu klassischem Beckenbodentraining</li>
+        <li>Rückbildung nach der Geburt</li>
+        <li>Begleittherapie bei Belastungsinkontinenz</li>
+      </ul>
+      <h3>Einschränkungen und Kontraindikationen</h3>
+      <p>Magnetfeldtherapie ist nicht für jeden geeignet. Kontraindikationen sind unter anderem Herzschrittmacher, implantierte Metallteile im Beckenbereich, Schwangerschaft sowie bestimmte neurologische Erkrankungen. Vor Beginn einer Behandlung sollte immer Rücksprache mit einer Ärztin oder einem Arzt gehalten werden.</p>
+      <h3>Ergänzung, kein Ersatz</h3>
+      <p>Die Magnetfeldtherapie aktiviert Muskeln – sie trainiert aber nicht Koordination, Körperwahrnehmung und bewusstes Ansteuern. Daher empfehlen Physiotherapeutinnen und Physiotherapeuten, sie mit aktivem Beckenbodentraining zu kombinieren, um langfristig Kontrolle und Muskelgedächtnis aufzubauen.</p>
+    `
+  },
+  'Magnetfeldtherapie nach Prostata-OP: Schneller wieder kontinent': {
+    kategorie: 'Männergesundheit',
+    datum: '12. Februar 2026',
+    lesezeit: '8 Min.',
+    inhalt: `
+      <p>Eine Prostataentfernung (radikale Prostatektomie) ist für viele Männer ein einschneidender Eingriff – nicht nur medizinisch, sondern auch für die Kontinenz. In den ersten Wochen und Monaten nach der Operation leiden die meisten Betroffenen unter Harninkontinenz, weil der innere Schließmuskel durch den Eingriff beeinträchtigt wird.</p>
+      <h3>Warum der Beckenboden nach der OP so wichtig ist</h3>
+      <p>Nach Entfernung der Prostata übernimmt der äußere Schließmuskel – gesteuert durch den Beckenboden – die gesamte Kontinenzfunktion. Je schneller und gezielter dieser Muskelbereich trainiert wird, desto kürzer ist in der Regel die Phase der Inkontinenz.</p>
+      <h3>Das Problem mit klassischen Übungen</h3>
+      <p>Unmittelbar nach der Operation sind viele Männer körperlich eingeschränkt, erschöpft oder haben Schmerzen. Hinzu kommt, dass der Beckenboden durch den Eingriff „aus dem Bewusstsein gefallen" sein kann – die Patienten spüren ihn kaum noch und können ihn schwer willentlich anspannen.</p>
+      <h3>Wo Magnetfeldtherapie helfen kann</h3>
+      <p>Magnetfeldbasiertes Training setzt genau hier an: Es aktiviert die Beckenbodenmuskulatur, ohne dass der Patient aktiv mitarbeiten muss. Der Muskel wird trainiert – auch wenn er sich der Betroffene noch nicht bewusst anspannen kann. Das erleichtert den Wiedereinstieg in aktives Training erheblich.</p>
+      <ul>
+        <li>Frühzeitige Muskelaktivierung, noch bevor aktive Übungen möglich sind</li>
+        <li>Kombination mit Physiotherapie für optimale Ergebnisse</li>
+        <li>Möglicher Einsatz bereits wenige Wochen nach dem Eingriff (nach ärztlicher Freigabe)</li>
+        <li>Bequeme Anwendung im Sitzen ohne körperliche Anstrengung</li>
+      </ul>
+      <h3>Realistische Erwartungen</h3>
+      <p>Magnetfeldtherapie beschleunigt die Rückbildung – garantiert aber keine vollständige Heilung. Die Prognose hängt von vielen Faktoren ab: Art des Eingriffs, präoperativer Beckenbodentonus, Alter und Begleiterkrankungen. In Kombination mit regelmäßiger Physiotherapie berichten viele Männer jedoch über deutlich schnellere Fortschritte als ohne unterstützende Behandlung.</p>
+      <h3>Wichtiger Hinweis</h3>
+      <p>Sprechen Sie vor Beginn jeder Therapie mit Ihrer behandelnden Ärztin oder Ihrem Arzt – auch für die Magnetfeldtherapie gilt, dass sie individuell angepasst und ärztlich begleitet werden sollte.</p>
+    `
+  },
+  'Magnetfeldstuhl vs. klassische Kegel-Übungen: Was leistet was?': {
+    kategorie: 'Übungen',
+    datum: '8. Februar 2026',
+    lesezeit: '6 Min.',
+    inhalt: `
+      <p>„Bis zu 25.000 Muskelkontraktionen in einer einzigen Sitzung" – solche Versprechen klingen beeindruckend. Doch was steckt wirklich dahinter, und wie schneidet die Technologie im Vergleich zu altbewährten Kegel-Übungen ab?</p>
+      <h3>Was klassische Kegel-Übungen leisten</h3>
+      <p>Kegel-Übungen sind das Gold-Standard-Verfahren bei Beckenbodentraining. Ihre Stärken: Sie trainieren Koordination und Körperwahrnehmung, sind kostenlos, jederzeit und überall durchführbar und bauen langfristig Muskelgedächtnis auf. Studien zeigen bei konsequenter Anwendung über 12 Wochen deutliche Verbesserungen bei Belastungsinkontinenz.</p>
+      <h3>Was Magnetfeldstühle leisten</h3>
+      <p>Magnetfeldgestützte Geräte aktivieren passiv die Beckenbodenmuskulatur. Die hohe Anzahl automatisierter Kontraktionen kann helfen, Muskeln aufzubauen, die willentlich kaum noch ansteuerbar sind. Das ist besonders nach Operationen oder bei stark geschwächter Muskulatur ein Vorteil.</p>
+      <h3>Direkter Vergleich</h3>
+      <ul>
+        <li><strong>Körperwahrnehmung:</strong> Kegel ✔ | Magnetfeld ✗ (kein Lerneffekt fürs bewusste Ansteuern)</li>
+        <li><strong>Muskelaufbau bei starker Schwäche:</strong> Kegel eingeschränkt | Magnetfeld ✔</li>
+        <li><strong>Zugänglichkeit:</strong> Kegel überall | Magnetfeld nur in Studios oder mit eigenem Gerät</li>
+        <li><strong>Kosten:</strong> Kegel kostenlos | Magnetfeld kostenpflichtig (Sitzungsgebühren)</li>
+        <li><strong>Zeitaufwand pro Einheit:</strong> Kegel 5–15 Min. | Magnetfeld ca. 20–22 Min.</li>
+        <li><strong>Eignung bei Körperhemmungen:</strong> Kegel neutral | Magnetfeld bekleidet, berührungsfrei ✔</li>
+      </ul>
+      <h3>Fazit</h3>
+      <p>Beide Ansätze schließen sich nicht aus – im Gegenteil: Viele Physiotherapeutinnen und Physiotherapeuten setzen Magnetfeldtherapie gezielt als Einstieg oder Ergänzung ein, wenn aktive Übungen noch nicht möglich sind oder die Wahrnehmung für den Beckenboden fehlt. Wer bereits gut trainieren kann, ist mit regelmäßigen Kegel-Übungen meist gut beraten – und spart dabei auch Kosten.</p>
+    `
   }
 };
 

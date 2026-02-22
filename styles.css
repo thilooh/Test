@@ -425,6 +425,7 @@ button {
 .therapie-bg        { background: linear-gradient(135deg, #d8c8f0 0%, #c0a8e0 100%); }
 .ernaehrung-bg      { background: linear-gradient(135deg, #f0dfc8 0%, #d8c0a0 100%); }
 .maenner-bg         { background: linear-gradient(135deg, #c8d8f0 0%, #a8bce0 100%); }
+.magnetfeld-bg      { background: linear-gradient(135deg, #d0c8f0 0%, #9888d8 100%); }
 
 .artikel-kategorie-badge {
     background: rgba(255,255,255,.92);
