@@ -672,4 +672,181 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initNewsletter();
   initSmoothScroll();
+  initQuiz();
 });
+
+/* -----------------------------------------------
+   HIFEM-Quiz
+   ----------------------------------------------- */
+function initQuiz() {
+  const wrap = document.getElementById('quiz-wrap');
+  if (!wrap) return;
+
+  const fragen = [
+    {
+      frage: 'Was beschreibt Ihre aktuelle Situation am besten?',
+      optionen: [
+        { id: 'belastung', text: 'Ich verliere Urin beim Husten, Niesen, Lachen oder Sport (Belastungsinkontinenz).' },
+        { id: 'drang',     text: 'Ich habe plötzlichen, starken Harndrang – manchmal mit Urinverlust (Dranginkontinenz).' },
+        { id: 'op',        text: 'Ich habe Beschwerden nach einer Operation (z.\u202fB. Prostata- oder Gebärmutterentfernung).' },
+        { id: 'vorbeugung',text: 'Ich habe keine akuten Beschwerden und möchte vorbeugend trainieren.' },
+      ]
+    },
+    {
+      frage: 'Haben Sie bereits Beckenbodenübungen oder Physiotherapie versucht?',
+      optionen: [
+        { id: 'nein',       text: 'Nein, noch nicht.' },
+        { id: 'kein-erfolg',text: 'Ja – aber ich spüre die richtigen Muskeln kaum oder habe keinen merklichen Erfolg gesehen.' },
+        { id: 'maessig',    text: 'Ja – mit mäßigem Erfolg; ich suche eine ergänzende Methode.' },
+        { id: 'gut',        text: 'Ja – mit gutem Erfolg; die Beschwerden haben sich deutlich gebessert.' },
+      ]
+    },
+    {
+      frage: 'Liegt bei Ihnen einer der folgenden Punkte vor?',
+      optionen: [
+        { id: 'herzschrittmacher', text: 'Herzschrittmacher oder anderes implantiertes elektronisches Gerät.' },
+        { id: 'metall',            text: 'Metallimplantat im Becken- oder Hüftbereich (z.\u202fB. Hüftprothese mit Metallanteilen).' },
+        { id: 'schwanger',         text: 'Ich bin schwanger.' },
+        { id: 'keine',             text: 'Keiner der genannten Punkte trifft auf mich zu.' },
+      ]
+    },
+    {
+      frage: 'Wie stark beeinträchtigen die Beschwerden Ihren Alltag?',
+      optionen: [
+        { id: 'kaum',             text: 'Kaum – nur in wenigen, bestimmten Situationen.' },
+        { id: 'spuerbar',         text: 'Spürbar – mehrmals pro Woche.' },
+        { id: 'stark',            text: 'Deutlich – täglich; ich meide bestimmte Aktivitäten.' },
+        { id: 'keine-beschwerden',text: 'Ich habe keine Beschwerden (nur Vorbeugung).' },
+      ]
+    }
+  ];
+
+  const ergebnisse = {
+    nicht_geeignet: {
+      css: 'ergebnis-orange',
+      icon: '&#9888;',
+      titel: 'Magnetfeldtherapie ist für Sie derzeit nicht geeignet',
+      text: 'Aufgrund eines der genannten Faktoren (Herzschrittmacher, Metallimplantat im Beckenbereich oder Schwangerschaft) wird von HIFEM-basierter Magnetfeldtherapie abgeraten. Sprechen Sie bitte mit Ihrer Ärztin oder Ihrem Arzt über alternative Behandlungswege, die für Ihre Situation sicher sind.',
+    },
+    erst_uebungen: {
+      css: 'ergebnis-blau',
+      icon: '&#9432;',
+      titel: 'Starten Sie zunächst mit gezieltem Beckenbodentraining',
+      text: 'Gezielte Beckenbodenübungen und – bei Bedarf – Physiotherapie sind der empfohlene erste Schritt. Wenn nach 8–12 Wochen konsequentem Training kein ausreichender Erfolg eintritt, kann Magnetfeldtherapie als ergänzende Maßnahme in Betracht kommen.',
+    },
+    baustein_moeglich: {
+      css: 'ergebnis-gruen',
+      icon: '&#10003;',
+      titel: 'Magnetfeldtherapie könnte ein sinnvoller Ergänzungsbaustein sein',
+      text: 'Wenn der Beckenboden sich kaum willentlich ansteuern lässt oder klassische Übungen bisher nicht ausreichend geholfen haben, kann HIFEM-basiertes Training ergänzend unterstützen. Lassen Sie sich von einer Physiotherapeutin oder Ärztin beraten, ob und in welchem Rahmen diese Methode für Ihre konkrete Situation geeignet ist.',
+    },
+    kein_bedarf: {
+      css: 'ergebnis-blau',
+      icon: '&#9432;',
+      titel: 'Ihr Beckenbodentraining wirkt gut',
+      text: 'Da Sie mit klassischen Übungen bereits gute Fortschritte machen, ist Magnetfeldtherapie in der Regel nicht notwendig. Setzen Sie Ihr Training fort. Bei neuen oder veränderten Beschwerden wenden Sie sich an Ihre Ärztin oder Ihren Arzt.',
+    }
+  };
+
+  let aktuelleFrageIdx = 0;
+  const antworten = {};
+
+  function berechneErgebnis() {
+    const q3 = antworten[2];
+    if (q3 === 'herzschrittmacher' || q3 === 'metall' || q3 === 'schwanger') {
+      return ergebnisse.nicht_geeignet;
+    }
+    const q1 = antworten[0];
+    const q2 = antworten[1];
+    if (q1 === 'vorbeugung' || q2 === 'nein') {
+      return ergebnisse.erst_uebungen;
+    }
+    if (q2 === 'gut') {
+      return ergebnisse.kein_bedarf;
+    }
+    return ergebnisse.baustein_moeglich;
+  }
+
+  function renderFrage() {
+    const frage = fragen[aktuelleFrageIdx];
+    const gesamt = fragen.length;
+    const fortschritt = Math.round((aktuelleFrageIdx / gesamt) * 100);
+    const gewaehlt = antworten[aktuelleFrageIdx];
+
+    wrap.innerHTML = `
+      <div class="quiz-progress">
+        <div class="quiz-progress-label">
+          <span>Frage ${aktuelleFrageIdx + 1} von ${gesamt}</span>
+          <span>${fortschritt}\u202f% abgeschlossen</span>
+        </div>
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" style="width:${fortschritt}%"></div>
+        </div>
+      </div>
+      <div class="quiz-card">
+        <p class="quiz-frage">${frage.frage}</p>
+        <div class="quiz-optionen">
+          ${frage.optionen.map(opt => `
+            <button class="quiz-option${gewaehlt === opt.id ? ' selected' : ''}" data-id="${opt.id}">
+              <span class="quiz-option-dot"></span>
+              <span>${opt.text}</span>
+            </button>
+          `).join('')}
+        </div>
+        <div class="quiz-nav">
+          ${aktuelleFrageIdx > 0 ? '<button class="quiz-btn-back">Zurück</button>' : ''}
+          <button class="quiz-btn-next" ${gewaehlt ? '' : 'disabled'}>
+            ${aktuelleFrageIdx < gesamt - 1 ? 'Weiter' : 'Ergebnis anzeigen'}
+          </button>
+        </div>
+      </div>
+    `;
+
+    wrap.querySelectorAll('.quiz-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        antworten[aktuelleFrageIdx] = btn.dataset.id;
+        wrap.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        wrap.querySelector('.quiz-btn-next').disabled = false;
+      });
+    });
+
+    const backBtn = wrap.querySelector('.quiz-btn-back');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        aktuelleFrageIdx--;
+        renderFrage();
+      });
+    }
+
+    wrap.querySelector('.quiz-btn-next').addEventListener('click', () => {
+      if (!antworten[aktuelleFrageIdx]) return;
+      if (aktuelleFrageIdx < fragen.length - 1) {
+        aktuelleFrageIdx++;
+        renderFrage();
+      } else {
+        renderErgebnis();
+      }
+    });
+  }
+
+  function renderErgebnis() {
+    const e = berechneErgebnis();
+    wrap.innerHTML = `
+      <div class="quiz-ergebnis ${e.css}">
+        <span class="quiz-ergebnis-icon">${e.icon}</span>
+        <h3>${e.titel}</h3>
+        <p>${e.text}</p>
+        <p class="quiz-hinweis">Diese Einschätzung ersetzt keine ärztliche oder physiotherapeutische Beratung.</p>
+        <button class="quiz-restart-btn">Quiz neu starten</button>
+      </div>
+    `;
+    wrap.querySelector('.quiz-restart-btn').addEventListener('click', () => {
+      aktuelleFrageIdx = 0;
+      Object.keys(antworten).forEach(k => delete antworten[k]);
+      renderFrage();
+    });
+  }
+
+  renderFrage();
+}
