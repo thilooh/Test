@@ -3,274 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kostenlose Immobilienbewertung online - Ermitteln Sie den Wert Ihrer Immobilie in wenigen Minuten ohne Registrierung.">
-    <title>Kostenlose Immobilienbewertung - Jetzt Immobilienwert ermitteln</title>
+    <meta name="description" content="Beckenboden Magazin - Expertenwissen zu Inkontinenz, Beckenboden-Übungen und Blasenschwäche. Hilfreiche Artikel für Ihre Gesundheit.">
+    <title>Beckenboden Magazin - Ihr Ratgeber für Beckenbodengesundheit</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="top">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>ImmoWert</h1>
+                    <span class="logo-icon">&#9679;</span>
+                    <span class="logo-text">Beckenboden <strong>Magazin</strong></span>
                 </div>
-                <nav class="main-nav">
-                    <a href="#rechner">Bewertung</a>
-                    <a href="#methoden">Methoden</a>
+                <nav class="main-nav" id="main-nav">
+                    <a href="#kategorien">Themen</a>
+                    <a href="#artikel">Artikel</a>
+                    <a href="#experten">Experten</a>
                     <a href="#faq">FAQ</a>
-                    <a href="#kontakt" class="btn-secondary">Kontakt</a>
+                    <a href="#newsletter" class="btn-nav">Newsletter</a>
                 </nav>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-inner">
                 <div class="hero-text">
-                    <h2 class="hero-title">Immobilienbewertung kostenlos online</h2>
-                    <p class="hero-subtitle">Ermitteln Sie kostenlos, ohne Registrierung und in wenigen Minuten eine erste Einschätzung zum Wert Ihrer Immobilie</p>
-                    <div class="trust-badges">
-                        <div class="trust-item">
-                            <span class="trust-icon">✓</span>
-                            <span>100% kostenlos</span>
-                        </div>
-                        <div class="trust-item">
-                            <span class="trust-icon">✓</span>
-                            <span>Keine Registrierung</span>
-                        </div>
-                        <div class="trust-item">
-                            <span class="trust-icon">✓</span>
-                            <span>In 3 Minuten</span>
-                        </div>
+                    <span class="hero-tag">Ihr Gesundheitsratgeber</span>
+                    <h1>Beckenboden&shy;gesundheit verstehen &amp; verbessern</h1>
+                    <p class="hero-lead">Fundierte Artikel von Experten zu Inkontinenz, Beckenboden-Training und allem, was Ihnen hilft, Ihre Lebensqualität zurückzugewinnen.</p>
+                    <div class="hero-search">
+                        <input type="text" id="search-input" placeholder="Artikel suchen, z.B. &quot;Inkontinenz&quot; ..." aria-label="Artikel suchen">
+                        <button id="search-btn" aria-label="Suchen">Suchen</button>
                     </div>
-                    <a href="#rechner" class="btn-primary btn-large">Jetzt kostenlos bewerten</a>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-image-placeholder">
-                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#f0f4f8"/>
-                            <path d="M200 80 L320 160 L320 260 L80 260 L80 160 Z" fill="#fff" stroke="#0066cc" stroke-width="3"/>
-                            <rect x="140" y="180" width="40" height="60" fill="#0066cc"/>
-                            <rect x="220" y="180" width="40" height="60" fill="#0066cc"/>
-                            <rect x="180" y="160" width="40" height="40" fill="#ffd700"/>
-                        </svg>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <strong>120+</strong>
+                            <span>Fachbeiträge</span>
+                        </div>
+                        <div class="stat">
+                            <strong>15</strong>
+                            <span>Experten</span>
+                        </div>
+                        <div class="stat">
+                            <strong>50.000+</strong>
+                            <span>Leserinnen &amp; Leser</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculator Section -->
-    <section id="rechner" class="calculator-section">
-        <div class="container">
-            <div class="section-header">
-                <h3>Welche Immobilie möchten Sie bewerten?</h3>
-                <p>Wählen Sie zunächst den Immobilientyp aus</p>
-            </div>
-
-            <!-- Property Type Selection -->
-            <div id="step-1" class="calculator-step active">
-                <div class="property-types">
-                    <div class="property-type-card" data-type="einfamilienhaus">
-                        <div class="property-icon">🏡</div>
-                        <h4>Einfamilienhaus</h4>
-                    </div>
-                    <div class="property-type-card" data-type="eigentumswohnung">
-                        <div class="property-icon">🏢</div>
-                        <h4>Eigentumswohnung</h4>
-                    </div>
-                    <div class="property-type-card" data-type="doppelhaushaelfte">
-                        <div class="property-icon">🏘️</div>
-                        <h4>Doppelhaushälfte</h4>
-                    </div>
-                    <div class="property-type-card" data-type="reihenhaus">
-                        <div class="property-icon">🏠</div>
-                        <h4>Reihenhaus</h4>
-                    </div>
-                    <div class="property-type-card" data-type="mehrfamilienhaus">
-                        <div class="property-icon">🏘️</div>
-                        <h4>Mehrfamilienhaus</h4>
-                    </div>
-                    <div class="property-type-card" data-type="grundstueck">
-                        <div class="property-icon">🌳</div>
-                        <h4>Grundstück</h4>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property Details Form -->
-            <div id="step-2" class="calculator-step">
-                <div class="progress-bar">
-                    <div class="progress-bar-fill" style="width: 33%"></div>
-                </div>
-                <form id="property-form" class="property-form">
-                    <div class="form-section">
-                        <h4>Adresse der Immobilie</h4>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="street">Straße und Hausnummer*</label>
-                                <input type="text" id="street" name="street" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="zipcode">Postleitzahl*</label>
-                                <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="city">Ort*</label>
-                                <input type="text" id="city" name="city" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h4>Details zur Immobilie</h4>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="living-area">Wohnfläche (m²)*</label>
-                                <input type="number" id="living-area" name="living-area" min="1" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="plot-area">Grundstücksfläche (m²)</label>
-                                <input type="number" id="plot-area" name="plot-area" min="1">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="rooms">Anzahl Zimmer*</label>
-                                <input type="number" id="rooms" name="rooms" min="1" step="0.5" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="construction-year">Baujahr*</label>
-                                <input type="number" id="construction-year" name="construction-year" min="1800" max="2026" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="condition">Zustand*</label>
-                                <select id="condition" name="condition" required>
-                                    <option value="">Bitte wählen</option>
-                                    <option value="neuwertig">Neuwertig</option>
-                                    <option value="gepflegt">Gepflegt</option>
-                                    <option value="renovierungsbeduerftig">Renovierungsbedürftig</option>
-                                    <option value="sanierungsbeduerftig">Sanierungsbedürftig</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="renovation-year">Letzte Renovierung (Jahr)</label>
-                                <input type="number" id="renovation-year" name="renovation-year" min="1900" max="2026">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h4>Ausstattung</h4>
-                        <div class="checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="balkon">
-                                <span>Balkon/Terrasse</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="garten">
-                                <span>Garten</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="keller">
-                                <span>Keller</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="garage">
-                                <span>Garage/Stellplatz</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="aufzug">
-                                <span>Aufzug</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="einbaukueche">
-                                <span>Einbauküche</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h4>Kontaktdaten für Ihr Ergebnis</h4>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name*</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-Mail*</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Telefon (optional)</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                        </div>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="privacy" required>
-                            <span>Ich akzeptiere die Datenschutzbestimmungen*</span>
-                        </label>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary" onclick="goToStep(1)">Zurück</button>
-                        <button type="submit" class="btn-primary">Bewertung erhalten</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Results Section -->
-            <div id="step-3" class="calculator-step">
-                <div class="result-container">
-                    <div class="result-header">
-                        <h3>Ihre Immobilienbewertung</h3>
-                        <p>Basierend auf Ihren Angaben und aktuellen Marktdaten</p>
-                    </div>
-                    <div class="result-value">
-                        <div class="value-range">
-                            <span class="value-label">Geschätzter Wert</span>
-                            <span class="value-amount" id="estimated-value">€ 0</span>
-                            <span class="value-range-text">Wertspanne: <span id="value-range">€ 0 - € 0</span></span>
-                        </div>
-                    </div>
-                    <div class="result-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Quadratmeterpreis</span>
-                            <span class="detail-value" id="price-per-sqm">€ 0/m²</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Bewertungsmethode</span>
-                            <span class="detail-value">Vergleichswertverfahren</span>
-                        </div>
-                    </div>
-                    <div class="result-disclaimer">
-                        <p><strong>Hinweis:</strong> Diese Bewertung ist eine unverbindliche Schätzung und ersetzt keine professionelle Immobilienbewertung durch einen Sachverständigen.</p>
-                    </div>
-                    <div class="result-actions">
-                        <button class="btn-primary" onclick="window.print()">Bewertung als PDF speichern</button>
-                        <button class="btn-secondary" onclick="resetCalculator()">Neue Bewertung</button>
-                    </div>
-                    <div class="next-steps">
-                        <h4>Nächste Schritte</h4>
-                        <div class="next-steps-cards">
-                            <div class="next-step-card">
-                                <h5>Professionelle Bewertung</h5>
-                                <p>Erhalten Sie eine detaillierte Bewertung durch unsere Experten</p>
-                                <a href="#kontakt" class="btn-link">Termin vereinbaren →</a>
-                            </div>
-                            <div class="next-step-card">
-                                <h5>Verkaufsberatung</h5>
-                                <p>Kostenlose Beratung zum optimalen Verkauf Ihrer Immobilie</p>
-                                <a href="#kontakt" class="btn-link">Beratung anfordern →</a>
+                <div class="hero-featured">
+                    <div class="featured-card">
+                        <span class="featured-label">Topbeitrag</span>
+                        <span class="featured-category">Inkontinenz</span>
+                        <h2>Blasenschwäche: Was wirklich hilft und was Mythos ist</h2>
+                        <p>Viele Menschen mit Inkontinenz greifen zuerst zu Einlagen. Doch die eigentliche Lösung liegt oft woanders. Erfahren Sie, welche Methoden medizinisch belegt wirksam sind.</p>
+                        <a href="#artikel-inkontinenz" class="btn-primary">Artikel lesen</a>
+                        <div class="author-row">
+                            <div class="author-avatar" aria-hidden="true">DM</div>
+                            <div class="author-info">
+                                <strong>Dr. med. Marion Schreiber</strong>
+                                <span>Urogynäkologie</span>
                             </div>
                         </div>
                     </div>
@@ -279,219 +78,444 @@
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust-section">
+    <!-- Kategorien -->
+    <section class="kategorien" id="kategorien">
         <div class="container">
-            <div class="trust-content">
-                <div class="trust-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50.000+</div>
-                        <div class="stat-label">Bewertungen durchgeführt</div>
+            <h2 class="section-title">Themen</h2>
+            <p class="section-subtitle">Wählen Sie ein Thema, das Sie interessiert</p>
+            <div class="kategorie-grid">
+                <button class="kategorie-btn active" data-filter="alle">
+                    <span class="kat-icon">&#9632;</span>
+                    <span>Alle Artikel</span>
+                </button>
+                <button class="kategorie-btn" data-filter="inkontinenz">
+                    <span class="kat-icon">&#128167;</span>
+                    <span>Inkontinenz</span>
+                </button>
+                <button class="kategorie-btn" data-filter="uebungen">
+                    <span class="kat-icon">&#127939;</span>
+                    <span>Übungen</span>
+                </button>
+                <button class="kategorie-btn" data-filter="ernaehrung">
+                    <span class="kat-icon">&#127807;</span>
+                    <span>Ernährung</span>
+                </button>
+                <button class="kategorie-btn" data-filter="schwangerschaft">
+                    <span class="kat-icon">&#10084;</span>
+                    <span>Schwangerschaft</span>
+                </button>
+                <button class="kategorie-btn" data-filter="maenner">
+                    <span class="kat-icon">&#128100;</span>
+                    <span>Männergesundheit</span>
+                </button>
+                <button class="kategorie-btn" data-filter="therapie">
+                    <span class="kat-icon">&#128138;</span>
+                    <span>Therapie</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artikel -->
+    <section class="artikel-section" id="artikel">
+        <div class="container">
+            <div id="no-results" class="no-results hidden">
+                <p>Keine Artikel gefunden. Versuchen Sie einen anderen Suchbegriff.</p>
+                <button id="reset-search">Alle Artikel anzeigen</button>
+            </div>
+            <div class="artikel-grid" id="artikel-grid">
+
+                <!-- Artikel 1 -->
+                <article class="artikel-karte" data-kategorie="inkontinenz" id="artikel-inkontinenz">
+                    <div class="artikel-bild inkontinenz-bg">
+                        <span class="artikel-kategorie-badge">Inkontinenz</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4.8/5</div>
-                        <div class="stat-label">Kundenbewertung</div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">8 Min. Lesezeit</span>
+                            <span class="datum">18. Feb. 2026</span>
+                        </div>
+                        <h3>Blasenschwäche: Was wirklich hilft und was Mythos ist</h3>
+                        <p>Millionen Menschen in Deutschland leiden unter Harninkontinenz, sprechen aber kaum darüber. Dabei gibt es wirksame Behandlungen. Wir räumen mit den häufigsten Irrtümern auf und zeigen, welche Wege wirklich zum Erfolg führen.</p>
+                        <div class="artikel-tags">
+                            <span>Blasenschwäche</span>
+                            <span>Behandlung</span>
+                            <span>Alltag</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Jahre Erfahrung</div>
+                </article>
+
+                <!-- Artikel 2 -->
+                <article class="artikel-karte" data-kategorie="uebungen">
+                    <div class="artikel-bild uebungen-bg">
+                        <span class="artikel-kategorie-badge">Übungen</span>
                     </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">6 Min. Lesezeit</span>
+                            <span class="datum">14. Feb. 2026</span>
+                        </div>
+                        <h3>10 Beckenboden-Übungen für den Alltag</h3>
+                        <p>Sie brauchen kein Fitnessstudio und keine Geräte: Diese zehn einfachen Übungen kräftigen Ihren Beckenboden diskret – im Sitzen, Stehen oder Liegen. Mit Schritt-für-Schritt-Anleitung und Illustrationen.</p>
+                        <div class="artikel-tags">
+                            <span>Kegel-Übungen</span>
+                            <span>Training</span>
+                            <span>Zuhause</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+                <!-- Artikel 3 -->
+                <article class="artikel-karte" data-kategorie="schwangerschaft">
+                    <div class="artikel-bild schwangerschaft-bg">
+                        <span class="artikel-kategorie-badge">Schwangerschaft</span>
+                    </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">10 Min. Lesezeit</span>
+                            <span class="datum">10. Feb. 2026</span>
+                        </div>
+                        <h3>Inkontinenz nach der Geburt: Ursachen und Rückbildung</h3>
+                        <p>Nach der Entbindung klagen viele Frauen über ungewollten Urinverlust. Das ist häufig und gut behandelbar. Erfahren Sie, warum es passiert und wie gezieltes Rückbildungstraining den Beckenboden wieder stärkt.</p>
+                        <div class="artikel-tags">
+                            <span>Postpartum</span>
+                            <span>Rückbildung</span>
+                            <span>Wochenbett</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+                <!-- Artikel 4 -->
+                <article class="artikel-karte" data-kategorie="therapie">
+                    <div class="artikel-bild therapie-bg">
+                        <span class="artikel-kategorie-badge">Therapie</span>
+                    </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">7 Min. Lesezeit</span>
+                            <span class="datum">5. Feb. 2026</span>
+                        </div>
+                        <h3>Beckenboden-Physiotherapie: Was erwartet mich?</h3>
+                        <p>Viele zögern, einen Beckenboden-Physiotherapeuten aufzusuchen – aus Scham oder Unwissenheit. Wir erklären, was bei der ersten Sitzung passiert, welche Techniken eingesetzt werden und wann die Therapie kassenärztlich erstattet wird.</p>
+                        <div class="artikel-tags">
+                            <span>Physiotherapie</span>
+                            <span>Biofeedback</span>
+                            <span>Kostenerstattung</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+                <!-- Artikel 5 -->
+                <article class="artikel-karte" data-kategorie="ernaehrung">
+                    <div class="artikel-bild ernaehrung-bg">
+                        <span class="artikel-kategorie-badge">Ernährung</span>
+                    </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">5 Min. Lesezeit</span>
+                            <span class="datum">1. Feb. 2026</span>
+                        </div>
+                        <h3>Ernährung bei Inkontinenz: Was die Blase beruhigt</h3>
+                        <p>Kaffee, Alkohol, Zitrusfrüchte – bestimmte Lebensmittel reizen die Blase. Andere unterstützen die Beckenbodengesundheit. Eine Ernährungsumstellung kann Symptome deutlich lindern, ohne Tabletten.</p>
+                        <div class="artikel-tags">
+                            <span>Blasendiät</span>
+                            <span>Ernährungsplan</span>
+                            <span>Blasenreizstoffe</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+                <!-- Artikel 6 -->
+                <article class="artikel-karte" data-kategorie="maenner">
+                    <div class="artikel-bild maenner-bg">
+                        <span class="artikel-kategorie-badge">Männergesundheit</span>
+                    </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">9 Min. Lesezeit</span>
+                            <span class="datum">28. Jan. 2026</span>
+                        </div>
+                        <h3>Männer und Beckenboden: Das Tabu-Thema enttabuisiert</h3>
+                        <p>Auch Männer haben einen Beckenboden – und leiden an Inkontinenz, besonders nach Prostataoperationen. Wir erklären die männliche Beckenbodenphysiologie und welche Übungen und Therapien konkret helfen.</p>
+                        <div class="artikel-tags">
+                            <span>Prostata</span>
+                            <span>Männer</span>
+                            <span>OP-Nachsorge</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+                <!-- Artikel 7 -->
+                <article class="artikel-karte" data-kategorie="inkontinenz">
+                    <div class="artikel-bild inkontinenz-bg">
+                        <span class="artikel-kategorie-badge">Inkontinenz</span>
+                    </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">6 Min. Lesezeit</span>
+                            <span class="datum">22. Jan. 2026</span>
+                        </div>
+                        <h3>Dranginkontinenz vs. Belastungsinkontinenz: Der Unterschied</h3>
+                        <p>Nicht alle Inkontinenz ist gleich. Die Behandlung hängt davon ab, welcher Typ vorliegt. Wir erklären die wichtigsten Formen, ihre Ursachen und warum die richtige Diagnose entscheidend ist.</p>
+                        <div class="artikel-tags">
+                            <span>Dranginkontinenz</span>
+                            <span>Stressinkontinenz</span>
+                            <span>Diagnose</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+                <!-- Artikel 8 -->
+                <article class="artikel-karte" data-kategorie="uebungen">
+                    <div class="artikel-bild uebungen-bg">
+                        <span class="artikel-kategorie-badge">Übungen</span>
+                    </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">4 Min. Lesezeit</span>
+                            <span class="datum">15. Jan. 2026</span>
+                        </div>
+                        <h3>Beckenboden-Training mit der Atemtechnik verbinden</h3>
+                        <p>Die Atmung und der Beckenboden arbeiten eng zusammen. Wer bewusstes Atmen in das Training integriert, erzielt deutlich bessere Ergebnisse. Eine Anleitung für Anfänger und Fortgeschrittene.</p>
+                        <div class="artikel-tags">
+                            <span>Atemübungen</span>
+                            <span>Koordination</span>
+                            <span>Anfänger</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+                <!-- Artikel 9 -->
+                <article class="artikel-karte" data-kategorie="therapie">
+                    <div class="artikel-bild therapie-bg">
+                        <span class="artikel-kategorie-badge">Therapie</span>
+                    </div>
+                    <div class="artikel-inhalt">
+                        <div class="artikel-meta">
+                            <span class="lesezeit">7 Min. Lesezeit</span>
+                            <span class="datum">8. Jan. 2026</span>
+                        </div>
+                        <h3>Biofeedback-Therapie: So lernt der Beckenboden sich selbst kennen</h3>
+                        <p>Biofeedback macht unsichtbare Muskeln sichtbar. Mit Sensoren und einem Monitor lernen Patientinnen und Patienten, gezielt die richtigen Muskeln anzuspannen. Die Methode ist wissenschaftlich gut belegt.</p>
+                        <div class="artikel-tags">
+                            <span>Biofeedback</span>
+                            <span>Elektronik</span>
+                            <span>Messung</span>
+                        </div>
+                        <button class="artikel-lesen-btn">Artikel lesen</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experten -->
+    <section class="experten-section" id="experten">
+        <div class="container">
+            <h2 class="section-title">Unsere Experten</h2>
+            <p class="section-subtitle">Alle Inhalte werden von geprüften Fachkräften verfasst und medizinisch geprüft</p>
+            <div class="experten-grid">
+                <div class="experten-karte">
+                    <div class="experte-avatar" aria-hidden="true">MS</div>
+                    <h3>Dr. med. Marion Schreiber</h3>
+                    <span class="experte-fach">Urogynäkologie &amp; Beckenbodenchirurgie</span>
+                    <p>Fachärztin mit 18 Jahren Erfahrung. Schwerpunkt: konservative und operative Behandlung von Beckenbodenstörungen.</p>
+                </div>
+                <div class="experten-karte">
+                    <div class="experte-avatar" aria-hidden="true">TK</div>
+                    <h3>Thomas Keller</h3>
+                    <span class="experte-fach">Physiotherapeut, Beckenbodenspezialist</span>
+                    <p>Zertifizierter Beckenboden-Physiotherapeut. Leitet Kurse für Frauen und Männer nach operativen Eingriffen.</p>
+                </div>
+                <div class="experten-karte">
+                    <div class="experte-avatar" aria-hidden="true">SH</div>
+                    <h3>Prof. Dr. Sabine Harms</h3>
+                    <span class="experte-fach">Urologie &amp; Kontinenzmedizin</span>
+                    <p>Professorin und Leiterin der Kontinenzsprechstunde. Forschungsschwerpunkt: Dranginkontinenz und Overactive Bladder.</p>
+                </div>
+                <div class="experten-karte">
+                    <div class="experte-avatar" aria-hidden="true">LW</div>
+                    <h3>Lisa Wendt</h3>
+                    <span class="experte-fach">Hebamme &amp; Rückbildungsexpertin</span>
+                    <p>Freiberufliche Hebamme und zertifizierte Rückbildungskursleiterin. Spezialisiert auf postpartale Beckenbodenrehabilitation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Methods Section -->
-    <section id="methoden" class="methods-section">
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
         <div class="container">
-            <div class="section-header centered">
-                <h3>Wie funktioniert die Immobilienbewertung?</h3>
-                <p>Wir nutzen professionelle Bewertungsmethoden für eine präzise Einschätzung</p>
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <p class="section-subtitle">Antworten auf die Fragen, die viele nicht zu stellen wagen</p>
+            <div class="faq-liste" id="faq-liste">
+
+                <div class="faq-item">
+                    <button class="faq-frage" aria-expanded="false">
+                        <span>Was ist der Beckenboden überhaupt?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-antwort" hidden>
+                        <p>Der Beckenboden ist eine Muskelplatte, die das Becken nach unten abschließt. Er besteht aus mehreren Schichten von Muskeln und Bindegewebe und trägt die Organe des kleinen Beckens: Blase, Darm und – bei Frauen – die Gebärmutter. Er spielt eine zentrale Rolle bei der Kontrolle von Blase und Darm sowie bei der sexuellen Funktion.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-frage" aria-expanded="false">
+                        <span>Ist Inkontinenz nur ein Problem älterer Menschen?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-antwort" hidden>
+                        <p>Nein. Inkontinenz betrifft Menschen jeden Alters. Besonders häufig tritt sie nach Schwangerschaften und Geburten auf, nach Prostataoperationen bei Männern sowie in den Wechseljahren. Schätzungsweise leidet jede dritte Frau und jeder zehnte Mann im Laufe des Lebens an Harninkontinenz – unabhängig vom Alter.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-frage" aria-expanded="false">
+                        <span>Helfen Beckenboden-Übungen wirklich?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-antwort" hidden>
+                        <p>Ja – bei vielen Formen der Inkontinenz sind gezielte Beckenboden-Übungen die erste und wirksamste Behandlungsoption. Studien zeigen, dass regelmäßiges Training (3–4 Mal täglich, über mindestens 12 Wochen) die Symptome bei 60–80 % der Betroffenen deutlich reduziert. Wichtig ist, die Übungen korrekt auszuführen – viele Menschen spannen unbewusst die falschen Muskeln an.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-frage" aria-expanded="false">
+                        <span>Wann sollte ich zur Ärztin oder zum Arzt?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-antwort" hidden>
+                        <p>Suchen Sie ärztliche Hilfe, wenn: ungewollter Urinverlust Ihren Alltag einschränkt, die Symptome plötzlich auftreten oder sich verschlechtern, Sie Blut im Urin bemerken, Sie Schmerzen beim Wasserlassen haben, oder Hausmittel und Übungen nach 8–12 Wochen keine Verbesserung bringen. Inkontinenz ist behandelbar – sprechen Sie offen mit Ihrer Ärztin oder Ihrem Arzt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-frage" aria-expanded="false">
+                        <span>Übernimmt die Krankenkasse Kosten für die Therapie?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-antwort" hidden>
+                        <p>Ja, in vielen Fällen. Gesetzliche Krankenkassen übernehmen in der Regel die Kosten für Beckenboden-Physiotherapie, wenn sie ärztlich verordnet wird. Auch Biofeedback-Therapie und bestimmte Hilfsmittel können erstattet werden. Fragen Sie Ihre Krankenkasse nach den genauen Bedingungen. Privatkassen erstatten häufig ein breiteres Spektrum an Behandlungen.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-frage" aria-expanded="false">
+                        <span>Kann Inkontinenz vollständig geheilt werden?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-antwort" hidden>
+                        <p>Das hängt von der Art und Ursache der Inkontinenz ab. Viele Betroffene erreichen durch konservative Behandlung (Übungen, Physiotherapie, Verhaltensänderungen) eine deutliche oder vollständige Besserung. In anderen Fällen können Medikamente oder operative Eingriffe helfen. Selbst wenn eine vollständige Heilung nicht möglich ist, lässt sich die Lebensqualität in fast allen Fällen erheblich verbessern.</p>
+                    </div>
+                </div>
+
             </div>
-            <div class="methods-grid">
-                <div class="method-card">
-                    <div class="method-icon">📊</div>
-                    <h4>Vergleichswertverfahren</h4>
-                    <p>Analyse vergleichbarer Immobilien in Ihrer Region basierend auf aktuellen Verkaufspreisen.</p>
-                    <ul class="method-features">
-                        <li>Aktuelle Marktdaten</li>
-                        <li>Regionale Preisanalyse</li>
-                        <li>Objektvergleich</li>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-text">
+                    <h2>Bleiben Sie informiert</h2>
+                    <p>Erhalten Sie neue Artikel, Experteninterviews und praktische Tipps direkt in Ihr Postfach – einmal pro Woche, kein Spam.</p>
+                    <ul class="newsletter-vorteile">
+                        <li>Neue Fachbeiträge jede Woche</li>
+                        <li>Exklusive Übungsanleitungen (PDF)</li>
+                        <li>Kostenlose Ressourcen für Betroffene</li>
                     </ul>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon">🏗️</div>
-                    <h4>Sachwertverfahren</h4>
-                    <p>Berechnung auf Basis der Baukosten unter Berücksichtigung von Alter und Zustand.</p>
-                    <ul class="method-features">
-                        <li>Bausubstanzanalyse</li>
-                        <li>Alterswertminderung</li>
-                        <li>Bodenwertermittlung</li>
-                    </ul>
+                <div class="newsletter-form-wrap">
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="form-group">
+                            <label for="nl-name">Vorname</label>
+                            <input type="text" id="nl-name" name="name" placeholder="Ihr Vorname" autocomplete="given-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="nl-email">E-Mail-Adresse <span class="required" aria-hidden="true">*</span></label>
+                            <input type="email" id="nl-email" name="email" placeholder="ihre@email.de" required autocomplete="email">
+                            <span class="field-error" id="email-error" role="alert"></span>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="nl-datenschutz" name="datenschutz" required>
+                            <label for="nl-datenschutz">Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#datenschutz">Datenschutzerklärung</a> zu. <span class="required" aria-hidden="true">*</span></label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Jetzt anmelden</button>
+                        <div class="form-success hidden" id="form-success" role="status">
+                            Danke! Bitte bestatigen Sie Ihre Anmeldung per E-Mail.
+                        </div>
+                    </form>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon">💰</div>
-                    <h4>Ertragswertverfahren</h4>
-                    <p>Bewertung basierend auf den zu erwartenden Mieteinnahmen.</p>
-                    <ul class="method-features">
-                        <li>Mietpreisanalyse</li>
-                        <li>Renditeberechnung</li>
-                        <li>Zukunftsprognose</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Table -->
-    <section class="comparison-section">
-        <div class="container">
-            <div class="section-header centered">
-                <h3>Bewertungsmethoden im Vergleich</h3>
-            </div>
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Methode</th>
-                            <th>Kosten</th>
-                            <th>Dauer</th>
-                            <th>Genauigkeit</th>
-                            <th>Geeignet für</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Online-Bewertung</strong></td>
-                            <td>Kostenlos</td>
-                            <td>3 Minuten</td>
-                            <td>⭐⭐⭐</td>
-                            <td>Erste Einschätzung</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Makler-Bewertung</strong></td>
-                            <td>Kostenlos</td>
-                            <td>1-2 Tage</td>
-                            <td>⭐⭐⭐⭐</td>
-                            <td>Verkaufsvorbereitung</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gutachter-Bewertung</strong></td>
-                            <td>500-2.000 €</td>
-                            <td>1-2 Wochen</td>
-                            <td>⭐⭐⭐⭐⭐</td>
-                            <td>Gerichtliche Zwecke</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header centered">
-                <h3>Häufig gestellte Fragen</h3>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wie genau ist die Online-Bewertung?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Unsere Online-Bewertung bietet eine solide erste Einschätzung des Immobilienwerts basierend auf aktuellen Marktdaten und Vergleichsobjekten. Für rechtlich bindende Zwecke empfehlen wir eine professionelle Bewertung durch einen Sachverständigen.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Ist die Bewertung wirklich kostenlos?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Ja, unsere Online-Immobilienbewertung ist zu 100% kostenlos und unverbindlich. Es entstehen keinerlei Kosten oder Verpflichtungen.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Welche Daten werden für die Bewertung benötigt?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Für eine präzise Bewertung benötigen wir grundlegende Informationen wie Adresse, Wohnfläche, Grundstücksgröße, Baujahr, Zustand und Ausstattung der Immobilie.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wie lange dauert die Bewertung?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Die Online-Bewertung erhalten Sie sofort nach Eingabe aller erforderlichen Daten - in der Regel dauert der gesamte Prozess nur 3-5 Minuten.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Was passiert mit meinen Daten?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Ihre Daten werden vertraulich behandelt und nur für die Erstellung der Immobilienbewertung verwendet. Wir geben Ihre Daten nicht an Dritte weiter.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="kontakt" class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h3>Bereit für Ihre kostenlose Immobilienbewertung?</h3>
-                <p>Erhalten Sie in wenigen Minuten eine professionelle Einschätzung zum Wert Ihrer Immobilie</p>
-                <a href="#rechner" class="btn-primary btn-large">Jetzt kostenlos bewerten</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="datenschutz">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>ImmoWert</h4>
-                    <p>Professionelle Immobilienbewertung online</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text footer-logo">Beckenboden <strong>Magazin</strong></span>
+                    <p>Fundiertes Wissen zu Beckenbodengesundheit von Expertinnen und Experten. Medizinisch geprüft.</p>
+                    <p class="disclaimer"><strong>Hinweis:</strong> Die Inhalte dieses Magazins dienen ausschließlich der allgemeinen Information und ersetzen keine ärztliche Beratung.</p>
                 </div>
-                <div class="footer-section">
-                    <h5>Service</h5>
+                <div class="footer-nav">
+                    <h4>Themen</h4>
                     <ul>
-                        <li><a href="#rechner">Immobilienbewertung</a></li>
-                        <li><a href="#methoden">Bewertungsmethoden</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#" data-filter="inkontinenz">Inkontinenz</a></li>
+                        <li><a href="#" data-filter="uebungen">Beckenboden-Übungen</a></li>
+                        <li><a href="#" data-filter="schwangerschaft">Schwangerschaft &amp; Geburt</a></li>
+                        <li><a href="#" data-filter="ernaehrung">Ernährung</a></li>
+                        <li><a href="#" data-filter="maenner">Männergesundheit</a></li>
+                        <li><a href="#" data-filter="therapie">Therapie &amp; Behandlung</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h5>Rechtliches</h5>
+                <div class="footer-nav">
+                    <h4>Magazin</h4>
+                    <ul>
+                        <li><a href="#experten">Unser Expertenteam</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav" id="kontakt">
+                    <h4>Rechtliches</h4>
                     <ul>
                         <li><a href="#">Impressum</a></li>
                         <li><a href="#">Datenschutz</a></li>
-                        <li><a href="#">AGB</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h5>Kontakt</h5>
-                    <ul>
-                        <li>Tel: 0800 / 123 456 78</li>
-                        <li>E-Mail: info@immowert.de</li>
+                        <li><a href="#">Redaktionelle Richtlinien</a></li>
+                        <li><a href="#">Cookie-Einstellungen</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 ImmoWert. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2026 Beckenboden Magazin. Alle Rechte vorbehalten.</p>
+                <p>Medizinisch geprüfte Inhalte &mdash; Letzte Aktualisierung: Februar 2026</p>
             </div>
         </div>
     </footer>
+
+    <!-- Artikel-Modal -->
+    <div class="modal-overlay" id="modal-overlay" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" aria-label="Artikel schließen">&times;</button>
+            <div class="modal-inhalt" id="modal-inhalt">
+                <!-- Wird dynamisch befüllt -->
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
