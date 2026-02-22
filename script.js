@@ -10,7 +10,6 @@
 const artikelInhalte = {
   'Blasenschwäche: Was wirklich hilft und was Mythos ist': {
     kategorie: 'Inkontinenz',
-    autor: 'Dr. med. Marion Schreiber',
     datum: '18. Februar 2026',
     lesezeit: '8 Min.',
     inhalt: `
@@ -29,7 +28,6 @@ const artikelInhalte = {
   },
   '10 Beckenboden-Übungen für den Alltag': {
     kategorie: 'Übungen',
-    autor: 'Thomas Keller',
     datum: '14. Februar 2026',
     lesezeit: '6 Min.',
     inhalt: `
@@ -55,7 +53,6 @@ const artikelInhalte = {
   },
   'Inkontinenz nach der Geburt: Ursachen und Rückbildung': {
     kategorie: 'Schwangerschaft',
-    autor: 'Lisa Wendt',
     datum: '10. Februar 2026',
     lesezeit: '10 Min.',
     inhalt: `
@@ -75,7 +72,6 @@ const artikelInhalte = {
   },
   'Beckenboden-Physiotherapie: Was erwartet mich?': {
     kategorie: 'Therapie',
-    autor: 'Thomas Keller',
     datum: '5. Februar 2026',
     lesezeit: '7 Min.',
     inhalt: `
@@ -96,7 +92,6 @@ const artikelInhalte = {
   },
   'Ernährung bei Inkontinenz: Was die Blase beruhigt': {
     kategorie: 'Ernährung',
-    autor: 'Prof. Dr. Sabine Harms',
     datum: '1. Februar 2026',
     lesezeit: '5 Min.',
     inhalt: `
@@ -124,7 +119,6 @@ const artikelInhalte = {
   },
   'Männer und Beckenboden: Das Tabu-Thema enttabuisiert': {
     kategorie: 'Männergesundheit',
-    autor: 'Prof. Dr. Sabine Harms',
     datum: '28. Januar 2026',
     lesezeit: '9 Min.',
     inhalt: `
@@ -145,7 +139,6 @@ const artikelInhalte = {
   },
   'Dranginkontinenz vs. Belastungsinkontinenz: Der Unterschied': {
     kategorie: 'Inkontinenz',
-    autor: 'Dr. med. Marion Schreiber',
     datum: '22. Januar 2026',
     lesezeit: '6 Min.',
     inhalt: `
@@ -160,7 +153,6 @@ const artikelInhalte = {
   },
   'Beckenboden-Training mit der Atemtechnik verbinden': {
     kategorie: 'Übungen',
-    autor: 'Thomas Keller',
     datum: '15. Januar 2026',
     lesezeit: '4 Min.',
     inhalt: `
@@ -178,7 +170,6 @@ const artikelInhalte = {
   },
   'Biofeedback-Therapie: So lernt der Beckenboden sich selbst kennen': {
     kategorie: 'Therapie',
-    autor: 'Prof. Dr. Sabine Harms',
     datum: '8. Januar 2026',
     lesezeit: '7 Min.',
     inhalt: `
@@ -365,7 +356,7 @@ function initModal() {
       <span class="modal-kategorie">${daten.kategorie}</span>
       <h2 id="modal-title">${titel}</h2>
       <div class="modal-meta">
-        Von <strong>${daten.autor}</strong> &middot; ${daten.datum} &middot; ${daten.lesezeit} Lesezeit
+        ${daten.datum} &middot; ${daten.lesezeit} Lesezeit
       </div>
       ${daten.inhalt}
       <div class="modal-hinweis">
