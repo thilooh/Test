@@ -1,169 +1,131 @@
-# Immobilienbewertung Landingpage
+# Beckenboden Magazin
 
-Eine conversion-optimierte Landingpage für die kostenlose Online-Bewertung von Immobilien.
+Eine moderne, vollständig statische HTML/CSS/JS-Website – ein Gesundheitsmagazin rund um das Thema Beckenbodengesundheit mit Schwerpunkt auf Inkontinenz, Übungen und medizinisch fundierten Ratgeberartikeln.
+
+## Über das Projekt
+
+Das Beckenboden Magazin bietet Betroffenen, Angehörigen und Interessierten fundierte, von (fiktiven) Fachleuten verfasste Artikel zu Themen wie:
+
+- Harninkontinenz (Ursachen, Formen, Behandlung)
+- Beckenboden-Übungen für den Alltag
+- Rückbildung nach der Geburt
+- Physiotherapie und Biofeedback
+- Ernährung und Lebensweise
+- Männergesundheit und Prostata
 
 ## Features
 
-### 🎯 Conversion-Optimierung
-- **Klare Wertversprechen**: Kostenlos, ohne Registrierung, in 3 Minuten
-- **Trust-Elemente**: Statistiken, Bewertungen, transparente Methodik
-- **Progressive Formularführung**: Mehrstufiger Prozess für bessere User Experience
-- **Sofortige Ergebnisse**: Direktes Feedback mit geschätztem Immobilienwert
+### Inhalt
+- **9 ausführliche Artikel** in 6 Themenkategorien
+- **Artikel-Modal**: Volltext wird in einem barrierefreien Dialog angezeigt
+- **4 Experten-Profile** (Ärztin, Physiotherapeut, Professorin, Hebamme)
+- **6 FAQ-Einträge** im Akkordeon-Format
 
-### 🏠 Immobilientypen
-- Einfamilienhaus
-- Eigentumswohnung
-- Doppelhaushälfte
-- Reihenhaus
-- Mehrfamilienhaus
-- Grundstück
+### Funktionalität
+- **Kategoriefilter**: Artikel nach Thema filtern (Inkontinenz, Übungen, Schwangerschaft, Ernährung, Männergesundheit, Therapie)
+- **Volltextsuche**: Artikel nach Stichwort durchsuchen
+- **Newsletter-Formular**: Mit E-Mail-Validierung und Datenschutz-Zustimmung
+- **Responsives Hamburger-Menü** für mobile Geräte
+- **Smooth Scrolling** für alle Anker-Links
+- **Barrierefreiheit**: ARIA-Attribute, semantisches HTML, Tastaturnavigation
 
-### 📊 Bewertungsmethoden
-- **Vergleichswertverfahren**: Analyse vergleichbarer Immobilien
-- **Sachwertverfahren**: Berechnung auf Basis der Baukosten
-- **Ertragswertverfahren**: Bewertung basierend auf Mieteinnahmen
-
-### 🎨 Design-Features
-- Modernes, responsives Design
-- Mobile-optimiert
-- Smooth Scrolling & Animationen
-- FAQ mit Akkordeon-Funktion
-- Druckbare Bewertungsergebnisse
-
-### 📝 Formularfelder
-- Adressdaten (Straße, PLZ, Ort)
-- Immobiliendetails (Wohnfläche, Grundstücksfläche, Zimmer)
-- Baujahr und Renovierungsjahr
-- Zustand der Immobilie
-- Ausstattungsmerkmale
-- Kontaktdaten
+### Design
+- Modernes, seriöses Gesundheitsmagazin-Design
+- Farben: Teal/Grün als Primärfarbe (medizinisch, vertrauenswürdig)
+- Vollständig responsiv (Desktop, Tablet, Mobile)
+- CSS Custom Properties (leicht anpassbar)
+- Animiertes Modal mit Overlay
+- Farbkodierte Kategorien
 
 ## Technologie
 
-- **HTML5**: Semantisches Markup
-- **CSS3**: Custom Properties, Grid, Flexbox, Animationen
-- **Vanilla JavaScript**: Keine Abhängigkeiten, optimierte Performance
-
-## Installation
-
-1. Klonen Sie das Repository:
-```bash
-git clone <repository-url>
-cd Test
-```
-
-2. Öffnen Sie `index.html` in Ihrem Browser:
-```bash
-open index.html
-```
-
-Oder starten Sie einen lokalen Server:
-```bash
-python -m http.server 8000
-```
-
-Dann öffnen Sie: `http://localhost:8000`
+- **HTML5**: Semantisches Markup, ARIA-Attribute
+- **CSS3**: Custom Properties, Grid, Flexbox, Animationen, `clamp()`
+- **Vanilla JavaScript**: Keine Abhängigkeiten, modulare Funktionen
 
 ## Struktur
 
 ```
 .
-├── index.html          # Haupt-HTML-Datei
-├── styles.css          # Styling und Layout
-├── script.js           # Interaktivität und Bewertungslogik
-└── README.md          # Dokumentation
+├── index.html    # Haupt-HTML-Datei (alle Sektionen)
+├── styles.css    # Design, Layout, Animationen
+├── script.js     # Interaktivität (Filter, Suche, Modal, FAQ, Newsletter)
+└── README.md     # Dokumentation
 ```
 
-## Bewertungsalgorithmus
+## Installation & Start
 
-Die Immobilienbewertung basiert auf mehreren Faktoren:
+```bash
+# Repository klonen
+git clone <repository-url>
+cd Test
 
-1. **Basispreis pro m²**: Regional basierend auf PLZ (vereinfachtes Modell)
-2. **Immobilientyp-Multiplikator**: Unterschiedliche Bewertung je nach Typ
-3. **Zustandsfaktor**: Neuwertig (1.2x) bis Sanierungsbedürftig (0.6x)
-4. **Altersfaktor**: Berücksichtigung des Gebäudealters
-5. **Renovierungsbonus**: Aufwertung bei kürzlicher Renovierung
-6. **Ausstattungsmerkmale**: Zusätzlicher Wert für Features
-7. **Grundstückswert**: Separate Bewertung des Grundstücks
+# Im Browser öffnen (einfachste Methode)
+open index.html
 
-**Ergebnis**: Geschätzter Wert mit ±10% Wertspanne
+# Oder mit lokalem Server
+python -m http.server 8000
+# dann: http://localhost:8000
+```
 
-## Conversion-Optimierungen
+## Sektionen der Webseite
 
-### Trust-Signale
-- ✓ 50.000+ durchgeführte Bewertungen
-- ✓ 4.8/5 Kundenbewertung
-- ✓ 15+ Jahre Erfahrung
-
-### User Experience
-- Progressive Disclosure: Schritt-für-Schritt-Führung
-- Visuelles Feedback bei Auswahl
-- Echtzeit-Validierung der Formulareingaben
-- Klare Fortschrittsanzeige
-
-### Call-to-Actions
-- Primärer CTA: "Jetzt kostenlos bewerten"
-- Sekundäre CTAs: "Termin vereinbaren", "Beratung anfordern"
-- Sticky Header mit Navigation
+| Sektion | Beschreibung |
+|---|---|
+| **Header** | Sticky Navigation mit Logo und Links |
+| **Hero** | Titel, Suchfeld, Statistiken, Featured-Artikel |
+| **Kategorien** | Filter-Buttons für alle 6 Themenkategorien |
+| **Artikel** | 9 Artikel-Karten mit Volltext-Modal |
+| **Experten** | Vorstellung des Redaktionsteams |
+| **FAQ** | 6 häufige Fragen im Akkordeon |
+| **Newsletter** | Anmeldeformular mit Validierung |
+| **Footer** | Links, Rechtliches, Disclaimer |
 
 ## Anpassungen
 
-### Farben
-Passen Sie die Farbvariablen in `styles.css` an:
+### Farben ändern
+Passen Sie die CSS-Variablen in `styles.css` an:
 
 ```css
 :root {
-    --primary-color: #0066cc;
-    --primary-hover: #0052a3;
-    /* ... weitere Farben */
+    --primary:       #2a7d6f;  /* Primärfarbe */
+    --primary-dark:  #1e5f54;  /* Hover-Zustand */
+    --primary-light: #e8f5f3;  /* Hintergründe */
+    /* ... */
 }
 ```
 
-### Preismodell
-Aktualisieren Sie die Funktion `getBasePriceForZipcode()` in `script.js` mit echten Marktdaten.
+### Neuen Artikel hinzufügen
 
-### Analytics
-Integrieren Sie Analytics in der Funktion `trackEvent()` in `script.js`:
+1. Fügen Sie in `index.html` ein neues `<article class="artikel-karte" data-kategorie="...">` hinzu
+2. Tragen Sie den Volltext in `script.js` im Objekt `artikelInhalte` ein
+3. Wählen Sie die passende Hintergrundklasse (z.B. `inkontinenz-bg`)
+
+### Newsletter-Backend anbinden
+
+Ersetzen Sie in `script.js` den Demo-Code im `submit`-Handler durch Ihren API-Aufruf:
 
 ```javascript
-function trackEvent(eventName, eventData) {
-    // Google Analytics
-    gtag('event', eventName, eventData);
-
-    // Facebook Pixel
-    fbq('track', eventName, eventData);
-}
+// Beispiel mit fetch
+fetch('/api/newsletter', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ email, name })
+});
 ```
 
 ## Browser-Kompatibilität
 
-- Chrome (letzte 2 Versionen)
-- Firefox (letzte 2 Versionen)
-- Safari (letzte 2 Versionen)
-- Edge (letzte 2 Versionen)
+- Chrome, Firefox, Safari, Edge (jeweils letzte 2 Versionen)
+- Mobile: iOS Safari, Android Chrome
 
 ## Responsive Breakpoints
 
-- Desktop: > 768px
-- Mobile: ≤ 768px
-
-## Performance
-
-- Keine externen Abhängigkeiten
-- Optimierte CSS und JavaScript
-- Lazy Loading bereit
-- Print-optimierte Styles
-
-## To-Do / Erweiterungen
-
-- [ ] Backend-Integration für Datenspeicherung
-- [ ] Email-Versand der Bewertungsergebnisse
-- [ ] Detaillierte Marktdaten-API-Integration
-- [ ] A/B-Testing-Framework
-- [ ] Multi-Language-Support
-- [ ] Bildupload für Immobilienfotos
-- [ ] PDF-Export mit Logo und Branding
-- [ ] CRM-Integration
+| Breakpoint | Layout |
+|---|---|
+| > 900px | Zweispaltig (Hero, Newsletter) |
+| 680–900px | Einspaltig |
+| < 680px | Mobile, Hamburger-Menü |
 
 ## Lizenz
 
